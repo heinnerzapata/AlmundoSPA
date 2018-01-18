@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  logoAlmundoPath = './logo-almundo.svg';
   title = 'Header Component';
 }
