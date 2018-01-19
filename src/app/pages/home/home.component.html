@@ -2,16 +2,52 @@
 <section id="homeComponent">
   <div class="">
     <div class="row">
-      <div class="col s12 m3 col-content filter-container">
-        <div class = "card white filter">
-              <div class = "card-content">
-                 <p>HTML5 is the next major revision of the HTML standard superseding
-                    HTML 4.01, XHTML 1.0, and XHTML 1.1. HTML5 is a standard for
-                    structuring and presenting content on the World Wide Web.</p>
+      <div class="col s12 l3 col-content filter-container">
+
+        <div class="row">
+          <div class="col s12">
+
+
+            <div class = "card white filter">
+              <div class="row filter-title-container">
+               <span class="filter-title">Filtros</span>
               </div>
-         </div>
+            </div>
+
+            <div class = "card white filter">
+              <div class="row row-toggle-filter">
+               <div class="col s1 center-align">
+                 <img class="search-image" src="/assets/images/icons/search.svg">
+               </div>
+               <div class="col s9 left-align">
+                 <span class="filter-title-b">Nombre del hotel</span>
+               </div>
+               <div class="col s2 center-align">
+                 <img class="search-image arrow-image" src="/assets/images/icons/arrow.svg">
+               </div>
+              </div>
+              <div class="row">
+                <div class="col s8 center-align">
+                    A
+                </div>
+                <div class="col s4 center-align">
+                    B
+                </div>
+              </div>
+            </div>
+
+            <div class = "card white filter">
+              <div class="row filter-title-container">
+               <span class="filter-title">Filtros</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <div class="col s12 m9 col-content col-content-right">
+      <div class="col s12 l9 col-content col-content-right">
         <div class = "card white card-container" *ngFor="let item of hotels">
               <div class = "card-content">
                  <div class="row row-hotel">
@@ -24,7 +60,7 @@
                           <span class="hotel-title">{{ item.name }}</span>
                        </div>
                        <div class="s12">
-                         <div class="star-container">
+                         <div class="star-container" title="{{ item.stars }} stars">
                            <div *ngFor="let start of item.stars | arrStars">
                               <img class="start-image" src="./assets/images/icons/star.svg">
                            </div>
@@ -39,8 +75,20 @@
                        </div>
                      </div>
                    </div>
-                   <div class="col s12 m4 l3 xl3 border">
-                     c
+                   <div class="col s12 m4 l3 xl3 colum-price valign-wrapper">
+                     <div class="row row-price valign-wrapper">
+                       <div class="row">
+                       <div class="col s12 center-align col-price">
+                         <p>Precio por noche por habitación</p>
+                       </div>
+                       <div class="col s12 col-price center-align">
+                         <span class="num-price"><span class="num-price-sym">ARS </span>{{ item.price | number }}</span>
+                       </div>
+                       <div class="col s12 col-price center-align">
+                         <a class="waves-effect waves-light btn">Ver hotel</a>
+                       </div>
+                     </div>
+                     </div>
                    </div>
                  </div>
               </div>
