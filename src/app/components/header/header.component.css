@@ -1,7 +1,20 @@
-#headerComponent{
-  background-color: rgba(10,59,123,1); 
+#headerComponent nav{
+  background-color: rgba(10,59,123,1);
+}
+
+#logoAlmundo{
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 h1{
   color: red;
+}
+
+@media only screen and (max-width: 992px){
+  nav .brand-logo {
+    margin-top: 0;
+    margin-left: 0;
+
+  }
 }

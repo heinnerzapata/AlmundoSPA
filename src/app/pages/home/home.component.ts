@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { HotelsService } from '../../services/hotels.service'
 
 @Component({
   selector: 'home-component',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core'
 })
 
 export class HomeComponent{
-  title = 'Home Component'
+  title = 'Home Componen2t'
+  hotels = []
+
+  constructor(private hotelsService:HotelsService) {
+      this.hotelsService.getHotels().subscribe( data => {
+        this.hotels = data.hotels;
+       });
+  }
 }

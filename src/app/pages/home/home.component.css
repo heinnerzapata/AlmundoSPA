@@ -1,3 +1,31 @@
-h1{
-  color: green;
+.col-content{
+  padding: 10px 20px 10px 20px;
+  background-color: rgba(244, 244, 244, 1);
+}
+
+#homeComponent .col-content-right{
+  padding-left: 0px;
+}
+
+.card-content{
+  padding: 7px;
+}
+
+.hotel-picture{
+  width: 320px;
+  height: 200px;
+}
+
+.col-hotel{
+  padding: 0px !important;
+}
+
+.row-hotel{
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 992px){
+  #homeComponent .col-content-right{
+    padding: 0px;
+  }
 }

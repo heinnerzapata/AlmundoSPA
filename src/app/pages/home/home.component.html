@@ -1,1 +1,36 @@
-<h1>{{ title }}</h1>
+<!--HomeComponent-->
+<section id="homeComponent">
+  <div class="">
+    <div class="row">
+      <div class="col s12 m3 col-content filter-container">
+        <div class = "card white filter">
+              <div class = "card-content">
+                 <p>HTML5 is the next major revision of the HTML standard superseding
+                    HTML 4.01, XHTML 1.0, and XHTML 1.1. HTML5 is a standard for
+                    structuring and presenting content on the World Wide Web.</p>
+              </div>
+         </div>
+      </div>
+      <div class="col s12 m9 col-content col-content-right">
+
+        <div class = "card white" *ngFor="let item of hotels">
+              <div class = "card-content">
+                 <div class="row row-hotel">
+                   <div class="col s12 l4 col-hotel">
+                     <img class="responsive-img hotel-picture" src="./assets/images/hotels/{{item.image}}">
+                   </div>
+                   <div class="col s12 l5 border">
+                     b
+                   </div>
+                   <div class="col s12 l3 border">
+                     c
+                   </div>
+                 </div>
+              </div>
+         </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--/HomeComponent-->

@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
+
+import { HttpModule } from '@angular/http';
+
+import { HotelsService } from './services/hotels.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,6 +21,7 @@ import { HomeComponent } from './pages/home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
         {
           path: '',
@@ -28,7 +33,7 @@ import { HomeComponent } from './pages/home/home.component';
         }
     ])
   ],
-  providers: [],
+  providers: [HotelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
