@@ -11,10 +11,18 @@ h1{
   color: red;
 }
 
+
+
 @media only screen and (max-width: 992px){
   nav .brand-logo {
     margin-top: 0;
     margin-left: 0;
 
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .brand-logo:hover{
+    transform: scale(1.03);
   }
 }

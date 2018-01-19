@@ -12,23 +12,39 @@
          </div>
       </div>
       <div class="col s12 m9 col-content col-content-right">
-
-        <div class = "card white" *ngFor="let item of hotels">
+        <div class = "card white card-container" *ngFor="let item of hotels">
               <div class = "card-content">
                  <div class="row row-hotel">
-                   <div class="col s12 l4 col-hotel">
+                   <div class="col s12 m4 l4 xl3 col-hotel">
                      <img class="responsive-img hotel-picture" src="./assets/images/hotels/{{item.image}}">
                    </div>
-                   <div class="col s12 l5 border">
-                     b
+                   <div class="col s12 m4 l5 xl6">
+                     <div class="row">
+                       <div class="s12">
+                          <span class="hotel-title">{{ item.name }}</span>
+                       </div>
+                       <div class="s12">
+                         <div class="star-container">
+                           <div *ngFor="let start of item.stars | arrStars">
+                              <img class="start-image" src="./assets/images/icons/star.svg">
+                           </div>
+                        </div>
+                       </div>
+                       <div class="s12">
+                         <div class="star-container">
+                           <div *ngFor="let ameni of item.amenities">
+                            <img class="amen-image" title="{{ ameni }} " src="/assets/images/icons/amenities/{{ ameni }}.svg">
+                           </div>
+                         </div>
+                       </div>
+                     </div>
                    </div>
-                   <div class="col s12 l3 border">
+                   <div class="col s12 m4 l3 xl3 border">
                      c
                    </div>
                  </div>
               </div>
          </div>
-
       </div>
     </div>
   </div>

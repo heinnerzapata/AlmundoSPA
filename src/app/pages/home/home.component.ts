@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
 import { HotelsService } from '../../services/hotels.service'
+import { ArrStars } from '../../pipes/arrStars.pipe'
+
 
 @Component({
   selector: 'home-component',
