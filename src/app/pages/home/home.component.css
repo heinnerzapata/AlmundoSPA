@@ -27,14 +27,36 @@
 }
 
 .hotel-picture{
-  width: 320px;
+  width: 100%;
   height: 200px;
+  background-color: white;
+  -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
 }
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 550px){
   .hotel-picture{
-    width: 100vw;
     height: 280px;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 992px){
+  .hotel-picture{
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1700px){
+  .hotel-picture{
+    height: 240px;
+  }
+}
+
+@media only screen and (min-width: 1701px){
+  .hotel-picture{
+    height: 240px;
   }
 }
 
@@ -100,13 +122,13 @@
 
 .num-price-sym{
   color: rgb(237,118,0);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .num-price{
   color: rgb(237,118,0);
   font-weight: bold;
-  font-size: 38px;
+  font-size: 34px;
 }
 
 .btn{

@@ -51,8 +51,12 @@
         <div class = "card white card-container" *ngFor="let item of hotels">
               <div class = "card-content">
                  <div class="row row-hotel">
-                   <div class="col s12 m4 l4 xl3 col-hotel">
-                     <img class="responsive-img hotel-picture" src="./assets/images/hotels/{{item.image}}">
+                   <div class="col s12 m4 l4 xl3 col-hotel hotel-picture-parent">
+
+                     <!--<img class="responsive-img hotel-picture" src="./assets/images/hotels/{{item.image}}">-->
+
+                     <div class="responsive-img hotel-picture" [ngStyle]="{ 'background-image' : 'url(' + item.image + ')' }"></div>
+
                    </div>
                    <div class="col s12 m4 l5 xl6">
                      <div class="row">
